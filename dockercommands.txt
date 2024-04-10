@@ -1,0 +1,6 @@
+# run development container
+docker compose up --build --target dev (which is default target)
+# run tests
+docker compose run server npm run test
+# run tests during build
+docker build -t node-docker-image-test --progress=plain --no-cache --target test . 
